@@ -1,0 +1,25 @@
+{
+    "name": "cloudycity/kuaishou-marketing-sdk",
+    "description": "Kuaishou MarketingAPI SDK",
+    "keywords": [
+        "kuaishou",
+        "marketing",
+        "sdk"
+    ] ,
+    "require": {
+        "php": ">=5.6.0",
+        "guzzlehttp/guzzle": "^6.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cloudycity",
+            "email": "cloudycity@foxmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CloudyCity\\KuaishouMarketingSDK\\": "src/"
+        }
+    }
+}

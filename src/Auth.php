@@ -27,16 +27,6 @@ class Auth
     protected $baseUri = 'https://ad.e.kuaishou.com/rest/openapi/';
 
     /**
-     * @var string
-     */
-    protected $endpointToGetToken = 'oauth2/authorize/access_token';
-
-    /**
-     * @var string
-     */
-    protected $endpointToRefreshToken = 'oauth2/authorize/refresh_token';
-
-    /**
      * Auth constructor.
      * @param $appId
      * @param $secret
@@ -82,22 +72,6 @@ class Auth
     }
 
     /**
-     * @return string
-     */
-    public function getEndpointToGetToken()
-    {
-        return $this->endpointToGetToken;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEndpointToRefreshToken()
-    {
-        return $this->endpointToRefreshToken;
-    }
-
-    /**
      * @param $authCode
      * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
      * @throws AuthException
@@ -111,7 +85,7 @@ class Auth
             'secret' => $this->getSecret(),
             'auth_code' => $authCode
         ];
-        return $this->httpPostJson($params);
+        return $this->httpPostJson('oauth2/authorize/access_token', $params);
     }
 
     /**
@@ -128,18 +102,19 @@ class Auth
             'secret' => $this->getSecret(),
             'refresh_token' => $refreshToken
         ];
-        return $this->httpPostJson($params);
+        return $this->httpPostJson('oauth2/authorize/refresh_token', $params);
     }
 
     /**
+     * @param $url
      * @param array $params
      * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
      * @throws AuthException
      * @throws Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    private function httpPostJson(array $params) {
-        $response = $this->request($this->getEndpointToRefreshToken(), 'POST', [
+    private function httpPostJson($url, array $params) {
+        $response = $this->request($url, 'POST', [
             'json' => $params
         ]);
 

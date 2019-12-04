@@ -107,6 +107,7 @@ class BaseClient
             $this->registerHttpMiddlewares();
         }
 
+        $options['json']['advertiser_id'] = $this->getAdvertiserId();
         $response = $this->performRequest($url, $method, $options);
 
         $result = $this->castResponseToType($response, 'array');
@@ -128,8 +129,6 @@ class BaseClient
     {
         // access token
         $this->pushMiddleware($this->accessTokenMiddleware(), 'access_token');
-        // advertiser_id
-        $this->pushMiddleware($this->advertiserIdMiddleware(), 'advertiser_id');
     }
 
     /**
@@ -143,23 +142,6 @@ class BaseClient
             return function ($request, $options) use ($handler) {
                 /** @var Request $request */
                 $request = $request->withHeader('Access-Token', $this->getAccessToken());
-
-                return $handler($request, $options);
-            };
-        };
-    }
-
-    /**
-     * Attache access token to request query.
-     *
-     * @return \Closure
-     */
-    protected function advertiserIdMiddleware()
-    {
-        return function ($handler) {
-            return function ($request, $options) use ($handler) {
-                /** @var Request $request */
-                $options['json']['advertiser_id'] = $this->getAdvertiserId();
 
                 return $handler($request, $options);
             };

@@ -3,7 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
-[![Build Status][ico-styleci]][link-styleci]
+[![StyleCI][ico-styleci]][link-styleci]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -140,14 +140,14 @@ MIT
 [ico-version]: https://img.shields.io/packagist/v/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/cloudycity/kuaishou-marketing-sdk/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
+[ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/222357859/shield?branch=master
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/cloudycity/kuaishou-marketing-sdk
 [link-travis]: https://travis-ci.org/cloudycity/kuaishou-marketing-sdk
-[link-scrutinizer]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk/code-structure
+[link-code-coverage]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk/code-structure
 [link-styleci]: https://styleci.io/repos/222357859
 [link-code-quality]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk
 [link-downloads]: https://packagist.org/cloudycity/kuaishou-marketing-sdk

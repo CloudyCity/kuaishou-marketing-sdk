@@ -2,6 +2,8 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Build Status][ico-styleci]][link-styleci]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -84,10 +86,10 @@ foreach ($apps as $app) {
 
 数据报表|执行方式 
 ---|---
-广告主数据（新版）|$client->report->getAdvertiserReports($params)
-广告计划数据（新版）|$client->report->getCampaignReports($params)
-广告组数据（新版）|$client->report->getUnitReports($params)
-广告创意数据（新版）|$client->report->getCreativeReports($params)
+广告主数据|$client->report->getAdvertiserReports($params)
+广告计划数据|$client->report->getCampaignReports($params)
+广告组数据|$client->report->getUnitReports($params)
+广告创意数据|$client->report->getCreativeReports($params)
  
 DMP 人群管理|执行方式
 ---|---
@@ -131,7 +133,7 @@ DMP 人群管理|执行方式
 获取线索列表|$client->tool->landingPage->getLeads($params)
 更新线索|$client->tool->landingPage->updateLeads($params)
 
-## Licensez
+## License
 
 MIT
 
@@ -139,12 +141,14 @@ MIT
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/cloudycity/kuaishou-marketing-sdk/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/222357859/shield?branch=master
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/cloudycity/kuaishou-marketing-sdk
 [link-travis]: https://travis-ci.org/cloudycity/kuaishou-marketing-sdk
-
 [link-scrutinizer]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk/code-structure
+[link-styleci]: https://styleci.io/repos/222357859
 [link-code-quality]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk
+[link-downloads]: https://packagist.org/cloudycity/kuaishou-marketing-sdk
 [link-author]: https://github.com/cloudycity

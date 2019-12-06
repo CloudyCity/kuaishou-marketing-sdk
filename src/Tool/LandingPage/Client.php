@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Tool\LandingPage;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 

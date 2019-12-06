@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Tool;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseInvoker;
 

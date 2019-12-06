@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Advertising\Unit;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 

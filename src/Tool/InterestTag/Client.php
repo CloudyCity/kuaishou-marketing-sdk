@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Tool\InterestTag;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 

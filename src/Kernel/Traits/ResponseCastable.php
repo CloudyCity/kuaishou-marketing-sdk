@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Traits;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\Contracts\Arrayable;
 use CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException;
@@ -10,7 +8,7 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\Http\Response;
 use CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 
-Trait ResponseCastable
+trait ResponseCastable
 {
     /**
      * @var string
@@ -35,16 +33,16 @@ Trait ResponseCastable
 
     /**
      * @param ResponseInterface $response
-     * @param null $type
+     * @param string $type
      * @return array|Response|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|ResponseInterface
      * @throws InvalidArgumentException
      */
-    protected function castResponseToType(ResponseInterface $response, $type = null)
+    protected function castResponseToType(ResponseInterface $response, $type = 'array')
     {
         $response = Response::buildFromPsrResponse($response);
         $response->getBody()->rewind();
 
-        switch (isset($type) ? $type : 'array') {
+        switch ($type) {
             case 'collection':
                 return $response->toCollection();
             case 'array':
@@ -67,13 +65,13 @@ Trait ResponseCastable
 
     /**
      * @param mixed $response
-     * @param string|null $type
+     * @param string $type
      *
      * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      *
      * @throws InvalidArgumentException
      */
-    protected function detectAndCastResponseToType($response, $type = null)
+    protected function detectAndCastResponseToType($response, $type = 'array')
     {
         switch (true) {
             case $response instanceof ResponseInterface:

@@ -1,14 +1,12 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Traits;
-
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;
 
-Trait HasHttpRequests
+trait HasHttpRequests
 {
     use ResponseCastable;
 
@@ -76,7 +74,7 @@ Trait HasHttpRequests
      */
     public function getHttpClient()
     {
-        if (!($this->httpClient instanceof ClientInterface)) {
+        if (!$this->httpClient) {
             $this->httpClient = new Client(['handler' => HandlerStack::create($this->getGuzzleHandler())]);
         }
         return $this->httpClient;
@@ -170,8 +168,10 @@ Trait HasHttpRequests
     protected function fixJsonIssue(array $options)
     {
         if (isset($options['json']) && is_array($options['json'])) {
-            $options['headers'] = array_merge(isset($options['headers']) ? $options['headers'] : [],
-                ['Content-Type' => 'application/json']);
+            $options['headers'] = array_merge(
+                isset($options['headers']) ? $options['headers'] : [],
+                ['Content-Type' => 'application/json']
+            );
             if (empty($options['json'])) {
                 $options['body'] = \GuzzleHttp\json_encode($options['json'], JSON_FORCE_OBJECT);
             } else {

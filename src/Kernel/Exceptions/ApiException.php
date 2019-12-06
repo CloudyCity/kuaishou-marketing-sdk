@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions;
-
 
 use Psr\Http\Message\ResponseInterface;
 
@@ -23,7 +21,7 @@ class ApiException extends Exception
      *
      * @param string                                   $message
      * @param \Psr\Http\Message\ResponseInterface|null $response
-     * @param null                                     $formattedResponse
+     * @param mixed                                    $formattedResponse
      * @param int|null                                 $code
      */
     public function __construct($message, ResponseInterface $response = null, $formattedResponse = null, $code = null)

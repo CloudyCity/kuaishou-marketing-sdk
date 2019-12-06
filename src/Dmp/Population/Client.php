@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Dmp\Population;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 

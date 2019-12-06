@@ -3,7 +3,6 @@
 
 namespace CloudyCity\KuaishouMarketingSDK\Advertising\Campaign;
 
-
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 
 class Client extends BaseClient

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Support;
 
 /**
@@ -184,7 +183,7 @@ class Arr
                 return array_merge($result, array_values($item));
             }
 
-            return array_merge($result, static::flatten($item, $depth - 1));
+            return array_merge($result, static::flatten($item, intval($depth - 1)));
         }, []);
     }
 

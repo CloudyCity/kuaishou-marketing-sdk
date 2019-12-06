@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Support;
 
 use ArrayAccess;

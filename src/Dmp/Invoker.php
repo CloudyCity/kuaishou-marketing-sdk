@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Dmp;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseInvoker;
 

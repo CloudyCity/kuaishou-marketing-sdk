@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions;
-
 
 /**
  * Class HttpException.

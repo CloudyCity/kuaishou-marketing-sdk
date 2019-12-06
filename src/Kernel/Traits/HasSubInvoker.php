@@ -1,16 +1,23 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Traits;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\Exception;
 
+/**
+ * Trait HasSubInvoker
+ * @package CloudyCity\KuaishouMarketingSDK\Kernel\Traits
+ * @property array $providers
+ */
 trait HasSubInvoker
 {
     use HasSdkBaseInfo;
 
     protected $instances = [];
+
+    abstract function getResponseType();
+
+    abstract function setResponseType($responseType);
 
     /**
      * @param $name

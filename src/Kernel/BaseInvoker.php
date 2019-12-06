@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\Traits\HasSubInvoker;
 
@@ -10,6 +8,9 @@ class BaseInvoker
 {
     use HasSubInvoker;
 
+    /**
+     * @var array
+     */
     protected $providers = [];
 
     /**

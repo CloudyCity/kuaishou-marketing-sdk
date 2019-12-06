@@ -25,8 +25,8 @@ class BaseClient
 
     /**
      * Client constructor.
-     * @param $advertiserId
-     * @param null $accessToken
+     * @param string $advertiserId
+     * @param string $accessToken
      * @param string $responseType
      */
     public function __construct($advertiserId, $accessToken, $responseType = 'array')
@@ -110,7 +110,7 @@ class BaseClient
         $options['json']['advertiser_id'] = $this->getAdvertiserId();
         $response = $this->performRequest($url, $method, $options);
 
-        $result = $this->castResponseToType($response, 'array');
+        $result = $this->castResponseToType($response);
         $formatted = $this->castResponseToType($response, $this->getResponseType());
 
         if (!isset($result['code']) || $result['code'] != 0) {

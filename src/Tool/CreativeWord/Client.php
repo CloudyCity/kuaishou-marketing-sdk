@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Tool\CreativeWord;
-
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 

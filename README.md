@@ -1,5 +1,9 @@
-# kuaishou-marketing-sdk
-快手Marketing API SDK
+# Kuaishou Marketing Sdk
+
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
 
 ## Installation
 ```bash
@@ -127,6 +131,20 @@ DMP 人群管理|执行方式
 获取线索列表|$client->tool->landingPage->getLeads($params)
 更新线索|$client->tool->landingPage->updateLeads($params)
 
-## License
+## Licensez
 
 MIT
+
+[ico-version]: https://img.shields.io/packagist/v/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/cloudycity/kuaishou-marketing-sdk/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/cloudycity/kuaishou-marketing-sdk.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/cloudycity/kuaishou-marketing-sdk
+[link-travis]: https://travis-ci.org/cloudycity/kuaishou-marketing-sdk
+
+[link-scrutinizer]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/cloudycity/kuaishou-marketing-sdk
+[link-author]: https://github.com/cloudycity

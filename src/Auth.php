@@ -3,7 +3,6 @@
 
 namespace CloudyCity\KuaishouMarketingSDK;
 
-
 use CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\AuthException;
 use CloudyCity\KuaishouMarketingSDK\Kernel\Traits\HasHttpRequests;
 
@@ -113,12 +112,13 @@ class Auth
      * @throws Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    private function httpPostJson($url, array $params) {
+    private function httpPostJson($url, array $params)
+    {
         $response = $this->request($url, 'POST', [
             'json' => $params
         ]);
 
-        $result = $this->castResponseToType($response, 'array');
+        $result = $this->castResponseToType($response);
         $formatted = $this->castResponseToType($response, $this->getResponseType());
 
         if (!isset($result['code']) || $result['code'] != 0) {

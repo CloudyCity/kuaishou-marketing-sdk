@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK\Kernel\Http;
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection;
@@ -93,5 +92,4 @@ class Response extends GuzzleResponse
     {
         return $this->getBodyContents();
     }
-
 }

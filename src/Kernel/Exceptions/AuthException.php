@@ -7,5 +7,4 @@ namespace CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions;
  */
 class AuthException extends ApiException
 {
-
 }

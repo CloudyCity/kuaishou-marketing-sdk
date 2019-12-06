@@ -7,14 +7,17 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取广告主报表
+     * 获取广告主报表.
      *
      * @link https://yiqixie.com/d/home/fcAC2OzurfmGRLHLJsNRz_wIX
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getAdvertiserReports(array $params)
     {
@@ -22,14 +25,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告计划报表
+     * 获取广告计划报表.
      *
      * @link https://yiqixie.com/d/home/fcAC2OzurfmGRLHLJsNRz_wIX
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getCampaignReports(array $params)
     {
@@ -37,14 +43,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告组报表
+     * 获取广告组报表.
      *
      * @link https://yiqixie.com/d/home/fcAC2OzurfmGRLHLJsNRz_wIX
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getUnitReports(array $params)
     {
@@ -52,14 +61,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告创意报表
+     * 获取广告创意报表.
      *
      * @link https://yiqixie.com/d/home/fcAC2OzurfmGRLHLJsNRz_wIX
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getCreativeReports(array $params)
     {

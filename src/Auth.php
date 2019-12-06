@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CloudyCity\KuaishouMarketingSDK;
 
 use CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\AuthException;
@@ -27,6 +26,7 @@ class Auth
 
     /**
      * Auth constructor.
+     *
      * @param $appId
      * @param $secret
      * @param $responseType
@@ -72,50 +72,58 @@ class Auth
 
     /**
      * @param $authCode
-     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
+     *
      * @throws AuthException
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws Kernel\Exceptions\InvalidArgumentException
+     *
+     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
      */
     public function getTokens($authCode)
     {
         $params = [
-            'app_id' => $this->getAppId(),
-            'secret' => $this->getSecret(),
-            'auth_code' => $authCode
+            'app_id'    => $this->getAppId(),
+            'secret'    => $this->getSecret(),
+            'auth_code' => $authCode,
         ];
+
         return $this->httpPostJson('oauth2/authorize/access_token', $params);
     }
 
     /**
      * @param $refreshToken
-     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
+     *
      * @throws AuthException
      * @throws Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
      */
     public function refreshTokens($refreshToken)
     {
         $params = [
-            'app_id' => $this->getAppId(),
-            'secret' => $this->getSecret(),
-            'refresh_token' => $refreshToken
+            'app_id'        => $this->getAppId(),
+            'secret'        => $this->getSecret(),
+            'refresh_token' => $refreshToken,
         ];
+
         return $this->httpPostJson('oauth2/authorize/refresh_token', $params);
     }
 
     /**
      * @param $url
      * @param array $params
-     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
+     *
      * @throws AuthException
      * @throws Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|Kernel\Http\Response|Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface
      */
     private function httpPostJson($url, array $params)
     {
         $response = $this->request($url, 'POST', [
-            'json' => $params
+            'json' => $params,
         ]);
 
         $result = $this->castResponseToType($response);
@@ -124,6 +132,7 @@ class Auth
         if (!isset($result['code']) || $result['code'] != 0) {
             $message = isset($result['message']) ? $result['message'] : '';
             $code = isset($result['code']) ? $result['code'] : 0;
+
             throw new AuthException($message, $response, $formatted, $code);
         }
 

@@ -7,14 +7,17 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取落地页列表
+     * 获取落地页列表.
      *
      * @link https://yiqixie.com/d/home/fcADtLnLiWvasTjKvfRy9S9lr
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getPages(array $params)
     {
@@ -22,14 +25,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取组件列表
+     * 获取组件列表.
      *
      * @link https://yiqixie.com/d/home/fcADtLnLiWvasTjKvfRy9S9lr
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getComponents(array $params)
     {
@@ -37,14 +43,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取线索列表
+     * 获取线索列表.
      *
      * @link https://yiqixie.com/d/home/fcADtLnLiWvasTjKvfRy9S9lr
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getLeads(array $params)
     {
@@ -52,14 +61,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 更新线索
+     * 更新线索.
      *
      * @link https://yiqixie.com/d/home/fcADtLnLiWvasTjKvfRy9S9lr
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function updateLeads(array $params)
     {

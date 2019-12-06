@@ -25,6 +25,7 @@ class BaseClient
 
     /**
      * Client constructor.
+     *
      * @param string $advertiserId
      * @param string $accessToken
      * @param string $responseType
@@ -40,14 +41,14 @@ class BaseClient
      * GET request.
      *
      * @param string $url
-     * @param array $data
-     * @param array $query
-     *
-     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
+     * @param array  $data
+     * @param array  $query
      *
      * @throws ApiException
      * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
      */
     public function httpGetJson($url, array $data = [], array $query = [])
     {
@@ -58,13 +59,13 @@ class BaseClient
      * JSON request.
      *
      * @param string $url
-     * @param array $data
-     *
-     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
+     * @param array  $data
      *
      * @throws ApiException
      * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
      */
     public function httpPost($url, array $data = [])
     {
@@ -75,14 +76,14 @@ class BaseClient
      * JSON request.
      *
      * @param string $url
-     * @param array $data
-     * @param array $query
-     *
-     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
+     * @param array  $data
+     * @param array  $query
      *
      * @throws ApiException
      * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
      */
     public function httpPostJson($url, array $data = [], array $query = [])
     {
@@ -92,14 +93,14 @@ class BaseClient
     /**
      * @param string $url
      * @param string $method
-     * @param array $options
-     * @param bool $returnRaw
-     *
-     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
+     * @param array  $options
+     * @param bool   $returnRaw
      *
      * @throws ApiException
      * @throws Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \Psr\Http\Message\ResponseInterface|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|array|object|string
      */
     public function request($url, $method = 'POST', array $options = [], $returnRaw = false)
     {
@@ -116,6 +117,7 @@ class BaseClient
         if (!isset($result['code']) || $result['code'] != 0) {
             $message = isset($result['message']) ? $result['message'] : '';
             $code = isset($result['code']) ? $result['code'] : 0;
+
             throw new ApiException($message, $response, $formatted, $code);
         }
 

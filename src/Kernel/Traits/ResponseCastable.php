@@ -33,9 +33,11 @@ trait ResponseCastable
 
     /**
      * @param ResponseInterface $response
-     * @param string $type
-     * @return array|Response|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|ResponseInterface
+     * @param string            $type
+     *
      * @throws InvalidArgumentException
+     *
+     * @return array|Response|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|ResponseInterface
      */
     protected function castResponseToType(ResponseInterface $response, $type = 'array')
     {
@@ -64,12 +66,12 @@ trait ResponseCastable
     }
 
     /**
-     * @param mixed $response
+     * @param mixed  $response
      * @param string $type
      *
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
-     *
      * @throws InvalidArgumentException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     protected function detectAndCastResponseToType($response, $type = 'array')
     {

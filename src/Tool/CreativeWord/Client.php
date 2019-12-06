@@ -7,13 +7,15 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取动态词包列表
+     * 获取动态词包列表.
      *
      * @link https://yiqixie.com/d/home/fcACuwYpSB3pFCkgbykniO7_h#
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function get()
     {
@@ -21,13 +23,15 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取贴纸样式列表
+     * 获取贴纸样式列表.
      *
      * @link https://yiqixie.com/d/home/fcACuwYpSB3pFCkgbykniO7_h#
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getStyles()
     {

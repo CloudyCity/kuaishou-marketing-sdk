@@ -64,6 +64,7 @@ trait HasHttpRequests
     public function setHttpClient(ClientInterface $httpClient)
     {
         $this->httpClient = $httpClient;
+
         return $this;
     }
 
@@ -77,6 +78,7 @@ trait HasHttpRequests
         if (!$this->httpClient) {
             $this->httpClient = new Client(['handler' => HandlerStack::create($this->getGuzzleHandler())]);
         }
+
         return $this->httpClient;
     }
 
@@ -84,7 +86,7 @@ trait HasHttpRequests
      * Add a middleware.
      *
      * @param callable $middleware
-     * @param string $name
+     * @param string   $name
      *
      * @return $this
      */
@@ -95,6 +97,7 @@ trait HasHttpRequests
         } else {
             array_push($this->middlewares, $middleware);
         }
+
         return $this;
     }
 
@@ -113,11 +116,11 @@ trait HasHttpRequests
      *
      * @param string $url
      * @param string $method
-     * @param array $options
-     *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @param array  $options
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \Psr\Http\Message\ResponseInterface
      */
     public function request($url, $method = 'GET', array $options = [])
     {
@@ -129,6 +132,7 @@ trait HasHttpRequests
         }
         $response = $this->getHttpClient()->request($method, $url, $options);
         $response->getBody()->rewind();
+
         return $response;
     }
 
@@ -140,6 +144,7 @@ trait HasHttpRequests
     public function setHandlerStack(HandlerStack $handlerStack)
     {
         $this->handlerStack = $handlerStack;
+
         return $this;
     }
 
@@ -157,6 +162,7 @@ trait HasHttpRequests
         foreach ($this->middlewares as $name => $middleware) {
             $this->handlerStack->push($middleware, $name);
         }
+
         return $this->handlerStack;
     }
 
@@ -179,6 +185,7 @@ trait HasHttpRequests
             }
             unset($options['json']);
         }
+
         return $options;
     }
 

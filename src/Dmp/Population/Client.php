@@ -7,14 +7,17 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 上传人群包
+     * 上传人群包.
      *
      * @link https://yiqixie.com/d/home/fcAAfm9OQj5OeEBd9TB2gtxvD
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function upload(array $params)
     {
@@ -22,14 +25,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取人群包列表
+     * 获取人群包列表.
      *
      * @link https://yiqixie.com/d/home/fcAAfm9OQj5OeEBd9TB2gtxvD
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function get(array $params)
     {
@@ -37,38 +43,46 @@ class Client extends BaseClient
     }
 
     /**
-     * 删除人群包
+     * 删除人群包.
      *
      * @link https://yiqixie.com/d/home/fcAAfm9OQj5OeEBd9TB2gtxvD
+     *
      * @param $id
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function delete($id)
     {
         $params = [
-            'orientation_id' => $id
+            'orientation_id' => $id,
         ];
+
         return $this->httpPostJson('v1/dmp/population/delete', $params);
     }
 
     /**
-     * 推送人群包
+     * 推送人群包.
      *
      * @link https://yiqixie.com/d/home/fcAAfm9OQj5OeEBd9TB2gtxvD
+     *
      * @param $id
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function push($id)
     {
         $params = [
-            'orientation_id' => $id
+            'orientation_id' => $id,
         ];
+
         return $this->httpPostJson('v1/dmp/population/push', $params);
     }
 }

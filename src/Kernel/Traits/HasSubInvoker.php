@@ -5,8 +5,8 @@ namespace CloudyCity\KuaishouMarketingSDK\Kernel\Traits;
 use CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\Exception;
 
 /**
- * Trait HasSubInvoker
- * @package CloudyCity\KuaishouMarketingSDK\Kernel\Traits
+ * Trait HasSubInvoker.
+ *
  * @property array $providers
  */
 trait HasSubInvoker
@@ -15,14 +15,16 @@ trait HasSubInvoker
 
     protected $instances = [];
 
-    abstract function getResponseType();
+    abstract public function getResponseType();
 
-    abstract function setResponseType($responseType);
+    abstract public function setResponseType($responseType);
 
     /**
      * @param $name
-     * @return mixed
+     *
      * @throws Exception
+     *
+     * @return mixed
      */
     public function __get($name)
     {
@@ -34,10 +36,13 @@ trait HasSubInvoker
                 $advertiserId = $this->getAdvertiserId();
                 $accessToken = $this->getAccessToken();
                 $responseType = $this->getResponseType();
+
                 return new $this->providers[$name]($advertiserId, $accessToken, $responseType);
             }
+
             throw new Exception("Undefined property $name", 500);
         }
+
         return $this->$name;
     }
 }

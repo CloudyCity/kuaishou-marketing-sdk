@@ -7,13 +7,15 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 获取广告账户信息
+     * 获取广告账户信息.
      *
      * @link https://yiqixie.com/d/home/fcAB8NFoHn82gbNSTAM4rU2re
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getInfo()
     {
@@ -21,13 +23,15 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告账户余额信息
+     * 获取广告账户余额信息.
      *
      * @link https://yiqixie.com/d/home/fcAB8NFoHn82gbNSTAM4rU2re
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getFunds()
     {
@@ -35,14 +39,17 @@ class Client extends BaseClient
     }
 
     /**
-     * 获取广告账户余额信息
+     * 获取广告账户余额信息.
      *
      * @link https://yiqixie.com/d/home/fcAB8NFoHn82gbNSTAM4rU2re
+     *
      * @param array $params
-     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     *
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
      * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     public function getFlows(array $params)
     {

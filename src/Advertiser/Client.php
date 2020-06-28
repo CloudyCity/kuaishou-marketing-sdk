@@ -55,4 +55,20 @@ class Client extends BaseClient
     {
         return $this->httpGetJson('v1/advertiser/fund/daily_flows', $params);
     }
+
+    /**
+     * 获取广告账户日预算.
+     *
+     * @link https://yiqixie.com/d/home/fcAB8NFoHn82gbNSTAM4rU2re
+     *
+     * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\ApiException
+     * @throws \CloudyCity\KuaishouMarketingSDK\Kernel\Exceptions\InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|\CloudyCity\KuaishouMarketingSDK\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     */
+    public function getBudget()
+    {
+        return $this->httpGetJson('v1/advertiser/budget/get');
+    }
 }

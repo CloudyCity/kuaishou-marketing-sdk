@@ -77,8 +77,8 @@ class Client extends BaseClient
     public function updateStatus($creativeId, $status)
     {
         $params = [
-            'unit_id'    => $creativeId,
-            'put_status' => $status,
+            'creative_id' => $creativeId,
+            'put_status'  => $status,
         ];
 
         return $this->httpPostJson('v1/creative/update/status', $params);

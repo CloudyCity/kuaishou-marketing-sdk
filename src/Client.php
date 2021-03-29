@@ -7,13 +7,13 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseInvoker;
 /**
  * Class Client.
  *
- * @property \CloudyCity\KuaishouMarketingSDK\Advertiser\Client $advertiser
+ * @property \CloudyCity\KuaishouMarketingSDK\Advertiser\Client           $advertiser
  * @property \CloudyCity\KuaishouMarketingSDK\Advertising\Campaign\Client $campaign
- * @property \CloudyCity\KuaishouMarketingSDK\Advertising\Unit\Client $unit
+ * @property \CloudyCity\KuaishouMarketingSDK\Advertising\Unit\Client     $unit
  * @property \CloudyCity\KuaishouMarketingSDK\Advertising\Creative\Client $creative
- * @property \CloudyCity\KuaishouMarketingSDK\Report\Client $report
- * @property \CloudyCity\KuaishouMarketingSDK\Tool\Invoker $tool
- * @property \CloudyCity\KuaishouMarketingSDK\Dmp\Invoker $dmp
+ * @property \CloudyCity\KuaishouMarketingSDK\Report\Client               $report
+ * @property \CloudyCity\KuaishouMarketingSDK\Tool\Invoker                $tool
+ * @property \CloudyCity\KuaishouMarketingSDK\Dmp\Invoker                 $dmp
  */
 class Client extends BaseInvoker
 {

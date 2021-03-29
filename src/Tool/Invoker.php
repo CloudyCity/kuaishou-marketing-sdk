@@ -7,12 +7,12 @@ use CloudyCity\KuaishouMarketingSDK\Kernel\BaseInvoker;
 /**
  * Class Invoker.
  *
- * @property \CloudyCity\KuaishouMarketingSDK\Tool\App\Client $app
+ * @property \CloudyCity\KuaishouMarketingSDK\Tool\App\Client          $app
  * @property \CloudyCity\KuaishouMarketingSDK\Tool\CreativeWord\Client $creativeWord
- * @property \CloudyCity\KuaishouMarketingSDK\Tool\File\Client $file
- * @property \CloudyCity\KuaishouMarketingSDK\Tool\InterestTag\Client $interestTag
- * @property \CloudyCity\KuaishouMarketingSDK\Tool\LandingPage\Client $landingPage
- * @property \CloudyCity\KuaishouMarketingSDK\Tool\Region\Client $region
+ * @property \CloudyCity\KuaishouMarketingSDK\Tool\File\Client         $file
+ * @property \CloudyCity\KuaishouMarketingSDK\Tool\InterestTag\Client  $interestTag
+ * @property \CloudyCity\KuaishouMarketingSDK\Tool\LandingPage\Client  $landingPage
+ * @property \CloudyCity\KuaishouMarketingSDK\Tool\Region\Client       $region
  */
 class Invoker extends BaseInvoker
 {
